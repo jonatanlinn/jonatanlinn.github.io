@@ -1,0 +1,93 @@
+<!-- Tala om att det är html-dokument -->
+<!DOCTYPE html>
+
+<!-- Alla element ska finnas inom html-taggen -->
+<html>
+<!-- I head placeras saker som inte är innehåll, tex css-filer och javascript -->
+<head>
+    <!-- Dessa 3 meta-taggar måste vara först i head för att alla tecken (åäö) och Bootstrap ska fungera korrekt -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <link rel="icon" type="image/png" href="bilder/62251-200.png">
+    <!-- Koppla in Bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <!-- Koppla in egen CSS-fil style.css OBS! Ha den som sista css-fil -->
+    <link rel="stylesheet" type ="text/css" href="css/style.css">
+
+    <!-- Angular -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+
+    <!-- Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+
+    <!-- AngularFire -->
+        <script src="https://cdn.firebase.com/libs/angularfire/2.2.0/angularfire.min.js"></script>
+
+    <!-- Koppla in och JQuery Bootstrap javascript -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <!-- Koppla in egen JavaScript-fil funktion.js OBS! Ha den som sista js-fil -->
+    <script type="text/javascript" src="js/funktion.js"></script>
+
+    <!-- I title skriver du titeln som webbläsarfönstret ska ha när den här sidan besöks-->
+    <title>Jonatan Linn</title>
+</head>
+
+<!-- I body finns allt innehåll på hemsidan -->
+<body ng-app="app">
+    <div id="verbox"></div>
+        <!-- I den här diven finns allt som ligger ovanför menyn och innehållet. Förslagsvis hemsidans namn -->
+        <div class="container">
+            <a href="index.html"><h1>Jonatan Linn</h1></a>
+        </div>
+
+            <!-- Den lilla kolumnen till vänster där menyn finns -->
+            <div class="col-sm-2">
+                <ul class="nav nav-pills nav-stacked nav-default">
+                    <li><a href="index.html"><span class="glyphicon glyphicon-glyphicon glyphicon-tent" aria-hidden="true"></span> Hem</a></li>
+                    <li><a href="menyval1.html"><span class="glyphicon glyphicon-glyphicon glyphicon-pencil" aria-hidden="true"></span> 3d saker</a></li>
+                    <li><a href="menyval2.html"><span class="glyphicon glyphicon-glyphicon glyphicon-cd" aria-hidden="true"></span> Segling</a></li>
+                    <li><a href="menyval3.html"><span class="glyphicon glyphicon-glyphicon glyphicon-glyphicon glyphicon-expand" aria-hidden="true"></span> Filmer om mig</a></li>
+                </ul>
+            </div>
+
+            <!-- Den stora kolumnen till höger om menyn där innehållet finns -->
+            <div class="col-sm-10 content">
+                <div class="row">
+                    <div class="col-sm-5">
+                        <img id="bildpåmig" src="bilder/IMG_2215.jpg" width="100%">
+                    </div>
+                        <div class="col-sm-3">
+                        <br>
+                        <i class="bildtext">På den här hemsidan beskriver jag,
+                        Jonatan, mig själv som person och
+                        vad jag är bra på samt förklarar
+                        vad ämnena jag är bra på.</i>
+                        </div>
+                        <div class="col-sm-7">
+                        <br>
+                            <p>Jag är 15 år gammal och ska prexis börja nian. De sakerna som jag både gillar och är bra på är segling, 3d modellering och 3d printning.</p>
+                        </div>
+                        <div class="col-sm-2" ng-controller="KommentarCtrl">
+                            <form ng-submit="addComment()">
+                                <div class="form-group">
+                                    <input placeholder="Ditt namn" type="text" class="form-control" ng-model="kommentar.skribent">
+                                </div>
+                                <div class="form-group">
+                                    <input placeholder="Din kommentar" type="text" class="form-control" ng-model="kommentar.text">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Kommentera</button>
+                            </form>
+                            <div ng-repeat="kommentar in kommentarer">
+                                <p><b>{{ kommentar.skribent }}</b> {{ kommentar.text }}</p>
+                            </div>
+                        </div>
+                </div>
+            </div>
+    </div>
+
+</body>
+</html>

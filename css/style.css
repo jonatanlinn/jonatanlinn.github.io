@@ -1,0 +1,89 @@
+body {
+	background-color: #6ec8dc;
+}
+
+.bildtext {
+	position: relative;
+	bottom: 0px;
+	left: 0px;
+}
+#bildpåmig {
+	float: left;
+}
+#box {
+	/*
+	position: relative;
+	top: -20px;
+	background-color: #6ec8dc;
+	height: 100px;
+    width: 116%;
+    left: -10%;
+    */
+
+
+}
+.content {
+	background-color: #ffffff;
+	min-height: 89vh;
+}
+#verbox {
+	/*
+	position: absolute;
+	background-color: #6ec8dc;
+	height: 150% !important;
+	width: 250px;
+	top: 80px;
+	*/
+
+}
+#text {
+	position: relative;
+	top: -100px;
+	right: -25px;
+	font-size: 50px;
+}
+h1 {
+	color: #ffffff;
+}
+.nav-pills li a {
+	color: white;
+}
+.nav-pills li a:hover {
+	color: #6ec8dc;
+}
+
+.parallax {
+    min-height: 600px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#bild1{
+    background-image: url("../bilder/3d_printingbigstock.jpg");
+}
+
+#bild2{
+    background-image: url("../bilder/3d-printing-causes-harmful-health-effects-illinois-institute-of-technology_dezeen_ban-1.jpg");
+}
+
+#hej{
+	padding-left:0px;
+	padding-right:0px; 
+}
+.scroll-box{
+  height:100px;
+  width: auto;
+  background-color: #6ec8dc;
+  display: block;
+}
+
+#parall{
+  color:white;
+  font-size: 20px;
+  font-family: times;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 100px;
+}

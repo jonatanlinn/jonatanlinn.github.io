@@ -1,0 +1,59 @@
+<!-- Tala om att det är html-dokument -->
+<!DOCTYPE html>
+
+<!-- Alla element ska finnas inom html-taggen -->
+<html>
+<!-- I head placeras saker som inte är innehåll, tex css-filer och javascript -->
+<head>
+    <!-- Dessa 3 meta-taggar måste vara först i head för att alla tecken (åäö) och Bootstrap ska fungera korrekt -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type="image/png" href="bilder/62251-200.png">
+    <!-- Koppla in Bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <!-- Koppla in egen CSS-fil style.css OBS! Ha den som sista css-fil -->
+    <link rel="stylesheet" type ="text/css" href="css/style.css">
+
+    <!-- Koppla in och JQuery Bootstrap javascript -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <!-- Koppla in egen JavaScript-fil funktion.js OBS! Ha den som sista js-fil -->
+    <script type="text/javascript" src="js/funktion.js"></script>
+
+    <!-- I title skriver du titeln som webbläsarfönstret ska ha när den här sidan besöks-->
+    <title>jonatan Linn</title>
+</head>
+
+<!-- I body finns allt innehåll på hemsidan -->
+<body>
+    <div id="verbox"></div>
+   <!-- I den här diven finns allt som ligger ovanför menyn och innehållet. Förslagsvis hemsidans namn -->
+        <div class="container">
+            <a href="index.html"><h1>Jonatan Linn</h1></a>
+        </div>
+
+
+
+            <!-- Den lilla kolumnen till vänster där menyn finns -->
+            <div class="col-sm-2">
+                <ul class="nav nav-pills nav-stacked nav-default">
+                    <li><a href="index.html"><span class="glyphicon glyphicon-glyphicon glyphicon-tent" aria-hidden="true"></span> Hem</a></li>
+                    <li><a href="menyval1.html"><span class="glyphicon glyphicon-glyphicon glyphicon-pencil" aria-hidden="true"></span> 3d saker</a></li>
+                    <li><a href="menyval2.html"><span class="glyphicon glyphicon-glyphicon glyphicon-cd" aria-hidden="true"></span> Segling</a></li>
+                    <li><a href="menyval3.html"><span class="glyphicon glyphicon-glyphicon glyphicon-glyphicon glyphicon-expand" aria-hidden="true"></span> Filmer om mig</a></li>
+                </ul>
+            </div>
+
+            <!-- Den stora kolumnen till höger om menyn där innehållet finns -->
+            <div class="col-sm-10 content">
+                <h2>Filmer om mig</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/graxjLAGNDg" frameborder="0" allowfullscreen></iframe>
+                <p>Det här är en roddbåt jag har bygt i lego.</p>
+            </div>
+
+
+</body>
+</html>
